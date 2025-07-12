@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Recibo.Devolucion.Calidad.Submenu_alta_calidad_devolucion">
+
+    <FrameLayout
+        android:id="@+id/background_blocker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView_impresion"
+        android:layout_width="380dp"
+        android:layout_height="431dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonMenu"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="28dp"
+        android:layout_height="35dp"
+        android:layout_margin="8dp"
+        android:layout_marginEnd="8dp"
+        android:drawablePadding="4dp"
+        android:paddingStart="2dp"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/menu_hamburguer"
+        app:iconSize="25dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#024CAA"
+        app:strokeColor="@color/white" />
+
+    <Button
+        android:id="@+id/buttonAsig_Control"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="337dp"
+        android:layout_height="96dp"
+        android:text="Asignación"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/logo_tarima"
+        app:iconSize="55dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.574"
+        app:rippleColor="#BAC0F0"
+        app:strokeColor="@color/black" />
+
+    <Button
+        android:id="@+id/buttonRevision"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="337dp"
+        android:layout_height="96dp"
+        android:text="Revisión"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/calidad_confirm"
+        app:iconSize="60dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.902"
+        app:rippleColor="#BAC0F0"
+        app:strokeColor="@color/black" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="305dp"
+        android:layout_height="80dp"
+        android:fontFamily="@font/archivo_black"
+        android:text="@string/lb_seleccion_proceso"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.282" />
+
+    <ImageView
+        android:id="@+id/imageViewEnvioLogo"
+        android:layout_width="44dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04"
+        app:srcCompat="@drawable/logo_controlcalidad" />
+
+    <TextView
+        android:id="@+id/lbEnvioTitulo"
+        android:layout_width="241dp"
+        android:layout_height="78dp"
+        android:fontFamily="@font/ar_one_sans_semibold"
+        android:text="Control Calidad Devolución"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Recibo.Devolucion.Calidad.Verificacion.CargaImagenes">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnTakePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tomar Foto"
+            android:backgroundTint="#0040A4"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:cornerRadius="5dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingTop="8dp">
+
+            <LinearLayout
+                android:id="@+id/photoContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnUploadPhotos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Subir Fotos"
+            android:backgroundTint="#2A9841"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:cornerRadius="5dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

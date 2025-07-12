@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="226dp"
+        android:layout_height="182dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.061"
+        app:srcCompat="@drawable/logo_slimco" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="88dp"
+        android:layout_height="32dp"
+        android:text="@string/lb_usuario"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="13dp"
+        android:text="@string/lb_password"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.572" />
+
+    <EditText
+        android:id="@+id/txtUsuario"
+        android:layout_width="141dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.635"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.521" />
+
+
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="141dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textAlignment="viewStart"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.612" />
+
+    <Button
+        android:id="@+id/buttonEliminar_pass"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="37dp"
+        android:layout_height="39dp"
+        android:paddingStart="5dp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/logo_delete"
+        app:iconSize="34dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.911"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.611"
+        app:rippleColor="#EBB0B0"
+        app:strokeColor="@color/white" />
+
+    <Button
+        android:id="@+id/buttonaceptar"
+        android:layout_width="138dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/btn_disabled_color"
+        android:text="@string/btn_aceptar_login"
+        android:textSize="20sp"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.826" />
+
+    <Button
+        android:id="@+id/buttonSalir"
+        android:layout_width="104dp"
+        android:layout_height="53dp"
+        android:backgroundTint="#B10000"
+        android:text="@string/btn_salir_login"
+        android:textSize="20sp"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.187"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.824" />
+
+
+    <Button
+        android:id="@+id/buttonEliminar_user"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="37dp"
+        android:layout_height="39dp"
+        android:paddingStart="5dp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/logo_delete"
+        app:iconSize="34dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.911"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498"
+        app:rippleColor="#EBB0B0"
+        app:strokeColor="@color/white" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        app:boxStrokeColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.350">
+
+        <AutoCompleteTextView
+            android:id="@+id/cbSelect"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:ellipsize="end"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView52"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2.3"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

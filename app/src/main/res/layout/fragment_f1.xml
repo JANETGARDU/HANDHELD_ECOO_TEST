@@ -1,0 +1,117 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linear_pickingtareas"
+    android:layout_width="350dp"
+    android:layout_height="430dp"
+    android:orientation="vertical"
+    android:layout_marginStart="16dp"
+    android:background="@drawable/bordes_fragmentos">
+
+    <LinearLayout
+        android:layout_width="332dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginVertical="5dp">
+
+        <Button
+            android:id="@+id/buttonOcultarf1"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_marginStart="295dp"
+            android:layout_width="35dp"
+            android:layout_height="33dp"
+            android:paddingStart="0dp"
+            app:icon="@drawable/logo_cerrar_rectangulo"
+            app:cornerRadius="0dp"
+            app:iconSize="35dp"
+            app:iconTintMode="add"
+            app:rippleColor="#EBB0B0"
+            app:strokeColor="#E42937"
+            app:iconTint="@android:color/transparent" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="332dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/styles_xml"
+        android:backgroundTint="#88DBE4"
+        android:layout_marginStart="8dp"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/txtCodigoF1busqueda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tabla de Tareas"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="100dp"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="332dp"
+        android:layout_height="322dp"
+        android:background="@drawable/styles_xml"
+        android:layout_marginStart="8dp"
+        android:fillViewport="true">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:id="@+id/tableLayout_f1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="4dp"
+                    android:stretchColumns="1">
+
+                    <TextView
+                        android:id="@+id/tableUBI_F1"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lb_ubicacion"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tableBOX_F1"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lb_box"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tableCANTIDADES_F1"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lbCantidad"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </HorizontalScrollView>
+
+    </ScrollView>
+
+</LinearLayout>
+

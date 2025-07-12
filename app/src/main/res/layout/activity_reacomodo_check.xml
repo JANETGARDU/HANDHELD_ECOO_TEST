@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Reacomodo.Tareas.Reacomodo_Check">
+
+    <FrameLayout
+        android:id="@+id/background_blocker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        app:boxStrokeColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.500"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.050">
+
+        <AutoCompleteTextView
+            android:id="@+id/cbSelectReacomodoCheckList"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:ellipsize="end"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="206dp"
+        android:layout_height="44dp"
+        android:text="@string/lb_totalPiezas"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.218" />
+
+    <EditText
+        android:id="@+id/editTextCodigo_ReacomodoCheck_list"
+        android:layout_width="222dp"
+        android:layout_height="50dp"
+        android:background="@drawable/styles_xml"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.891" />
+
+    <Button
+        android:id="@+id/buttonEliminar_codigo_ReacomodoCheck"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="41dp"
+        android:layout_height="46dp"
+        android:paddingStart="5dp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/logo_delete"
+        app:iconSize="36dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.896"
+        app:rippleColor="#EBB0B0"
+        app:strokeColor="@color/white" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="355dp"
+        android:layout_height="290dp"
+        android:background="@drawable/styles_xml"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.539">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:id="@+id/tableLayout_ReacomodoCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="4dp"
+                    android:stretchColumns="1">
+
+                    <TextView
+                        android:id="@+id/tableCodigo_Check_reacomodo"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lbcodigo"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tablePiezas_Check_reacomodo"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lb_piezas"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </HorizontalScrollView>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="340dp"
+        android:layout_height="500dp"
+        android:background="#BCCCDC"
+
+        android:id="@+id/Frame_faltantes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="300dp"
+            android:layout_height="290dp"
+            android:background="@drawable/styles_xml"
+            android:fillViewport="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            >
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableLayout
+                    android:id="@+id/tableLayout_ReacomodoCheck_faltantes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="4dp"
+                        android:stretchColumns="1">
+
+                        <TextView
+                            android:id="@+id/tableCodigo_Check_reacomodo_faltantes"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/styles_xml"
+                            android:text="@string/lbcodigo"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tablePiezas_Check_reacomodo_faltantes"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/styles_xml"
+                            android:text="@string/lb_piezas"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </HorizontalScrollView>
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/textDescripcionCheck_Faltantes"
+            android:layout_width="300dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="340dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonCancelar_check_faltantes"
+            android:layout_width="145dp"
+            android:layout_height="59dp"
+            android:backgroundTint="#800000"
+            android:paddingStart="2dp"
+            android:paddingEnd="0dp"
+            android:text="@string/lb_cancelar"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="27dp"
+            app:cornerRadius="5dp"
+            android:layout_marginStart="95dp"
+            android:layout_marginTop="420dp"
+            />
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="368dp"
+        android:layout_height="54dp"
+        android:background="#81BFDA"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/buttonVer_faltantes"
+            android:layout_width="160dp"
+            android:layout_height="48dp"
+            android:layout_gravity="start"
+            android:backgroundTint="#81BFDA"
+            android:padding="0dp"
+            android:text="@string/lb_ver_faltantes"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:cornerRadius="5dp" />
+
+        <Button
+            android:id="@+id/buttonVerificar_piezas"
+            android:layout_width="184dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:backgroundTint="#81BFDA"
+            android:text="@string/lb_verificar_piezas"
+            android:textColor="@color/black"
+            android:textSize="19dp"
+            app:cornerRadius="5dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

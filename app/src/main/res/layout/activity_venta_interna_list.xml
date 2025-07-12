@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Picking.Cedis.VentaInterna.Venta_Interna_List">
+
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="54dp"
+        android:layout_height="43dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logo_venta_interna" />
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VENTA INTERNA"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        app:boxStrokeColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100">
+
+        <AutoCompleteTextView
+            android:id="@+id/cbSelectVentaInterna_PI"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:inputType="none"
+            android:paddingTop="6sp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            tools:layout_editor_absoluteX="59dp"
+            tools:layout_editor_absoluteY="276dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="355dp"
+        android:layout_height="290dp"
+        android:background="@drawable/styles_xml"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.746">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:id="@+id/tableLayout_VentaI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="4dp"
+                    android:stretchColumns="1">
+
+                    <TextView
+                        android:id="@+id/tableDescripcion_pi_venta_in"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lbDescripcion"
+                        android:textSize="20sp"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tableCodigo_pi_venta_in"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lbcodigo"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tableCantidad_pi_venta_in"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lbCantidad"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tableUbicacion_pi_venta_in"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lb_ubicacion"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tableCaja_pi_venta_in"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lb_box"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+
+                    <TextView
+                        android:id="@+id/tableItem_pi_venta_in"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lb_item"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tableCodigo_referencia"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="Código Referencia"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </HorizontalScrollView>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonOK_PICK_Ven_In"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="46dp"
+        android:layout_height="52dp"
+        android:paddingStart="5dp"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/logo_check"
+        app:iconSize="38dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.824"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.083"
+        app:rippleColor="#B0EBB1"
+        app:strokeColor="@color/white" />
+
+    <Button
+        android:id="@+id/buttonRecargar_Ven_In"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="46dp"
+        android:layout_height="52dp"
+        android:paddingStart="5dp"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/logo_recargar"
+        app:iconSize="38dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.083"
+        app:rippleColor="#B0CAEB"
+        app:strokeColor="@color/white" />
+
+    <TextView
+        android:id="@+id/txtDescripcion_Venta_In_Pi"
+        android:layout_width="319dp"
+        android:layout_height="88dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/lb_sugerido"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.304"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.29" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

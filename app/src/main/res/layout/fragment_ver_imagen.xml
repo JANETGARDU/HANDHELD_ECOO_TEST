@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="340dp"
+    android:layout_height="395dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bordes_fragmentos"
+    android:gravity="center"
+    android:padding="16dp"
+    android:layout_marginStart="20dp">
+
+    <LinearLayout
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:layout_marginVertical="5dp">
+
+        <Button
+            android:id="@+id/buttonOcultarVer_Imagen"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_marginStart="270dp"
+            android:layout_width="35dp"
+            android:layout_height="33dp"
+            android:paddingStart="0dp"
+            app:icon="@drawable/logo_cerrar_rectangulo"
+            app:cornerRadius="0dp"
+            app:iconSize="35dp"
+            app:iconTintMode="add"
+            app:rippleColor="#EBB0B0"
+            app:strokeColor="#E42937"
+            app:iconTint="@android:color/transparent" />
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/imageViewProduct"
+        android:layout_width="310dp"
+        android:layout_height="310dp"
+        android:scaleType="center"
+        android:background="@drawable/styles_xml"/>
+
+</LinearLayout>

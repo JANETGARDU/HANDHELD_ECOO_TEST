@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Embarque.Venta_interna.Embarque_venta_interna">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="54dp"
+        android:layout_height="43dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logo_embarque_venta_interna" />
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VENTA INTERNA"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.587"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <EditText
+        android:id="@+id/txtEditFolio"
+        android:layout_width="286dp"
+        android:layout_height="46dp"
+        android:background="@drawable/styles_xml"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.296"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.089" />
+
+    <Button
+        android:id="@+id/buttonEliminar_folio"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="41dp"
+        android:layout_height="46dp"
+        android:paddingStart="5dp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/logo_delete"
+        app:iconSize="36dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.089"
+        app:rippleColor="#EBB0B0"
+        app:strokeColor="@color/white" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="350dp"
+        android:layout_height="239dp"
+        android:background="@drawable/styles_xml"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.786">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="4dp"
+                    android:stretchColumns="1">
+
+                    <TextView
+                        android:id="@+id/tableCodigo"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lbcodigo"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tableDescipcion"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lbDescripcion"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tablePiezas"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lb_piezas"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </HorizontalScrollView>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lb_folio"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.191" />
+
+    <TextView
+        android:id="@+id/txt_piezas"
+        android:layout_width="142dp"
+        android:layout_height="34dp"
+        android:text="@string/lb_sugerido"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.702"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.433" />
+
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lb_nombre_cliente"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.311" />
+
+    <TextView
+        android:id="@+id/txt_cliente"
+        android:layout_width="191dp"
+        android:layout_height="55dp"
+        android:text="@string/lb_sugerido"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.859"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.326" />
+
+    <TextView
+        android:id="@+id/texttotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lb_totalPiezas"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.425" />
+
+    <TextView
+        android:id="@+id/txt_folio"
+        android:layout_width="142dp"
+        android:layout_height="34dp"
+        android:text="@string/lb_sugerido"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.702"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.196" />
+
+    <Button
+        android:id="@+id/buttonConfirmar"
+        android:layout_width="145dp"
+        android:layout_height="45dp"
+        android:backgroundTint="@color/btn_disabled_color"
+        android:paddingStart="2dp"
+        android:paddingEnd="0dp"
+        android:text="@string/lb_confirmar"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.898"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

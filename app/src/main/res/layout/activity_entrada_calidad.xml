@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Recibo.Abastecimiento.ControlCalidad.Alta.Entrada_Calidad">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout6"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        app:boxStrokeColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.400"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.120">
+
+        <AutoCompleteTextView
+            android:id="@+id/cbSelect"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:ellipsize="end"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/imageViewEnvioLogo"
+        android:layout_width="54dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.234"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.013"
+        app:srcCompat="@drawable/calidad_confirm" />
+
+    <TextView
+        android:id="@+id/lbEnvioTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ar_one_sans_semibold"
+        android:text="@string/lb_entrada"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.013" />
+
+    <EditText
+        android:id="@+id/txtUbicacion"
+        android:layout_width="290dp"
+        android:layout_height="53dp"
+        android:background="@drawable/styles_xml"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ubicación:"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.38" />
+
+    <Button
+        android:id="@+id/buttonConfirmar"
+        android:layout_width="144dp"
+        android:layout_height="54dp"
+        android:backgroundTint="@color/btn_disabled_color"
+        android:paddingStart="2dp"
+        android:paddingEnd="0dp"
+        android:text="@string/lb_confirmar"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.811" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Packs_Combos.Busqueda_Packs">
+
+    <TextView
+        android:id="@+id/lb_CombosPacketes"
+        android:layout_width="279dp"
+        android:layout_height="37dp"
+        android:text="@string/lb_buscadorCombo"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.119" />
+
+    <EditText
+        android:id="@+id/txtPacks_Codigo"
+        android:layout_width="251dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.412"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.244" />
+
+    <Button
+        android:id="@+id/buttonEliminar_Busqueda"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="41dp"
+        android:layout_height="46dp"
+        android:paddingStart="5dp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/logo_delete"
+        app:iconSize="36dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.245"
+        app:rippleColor="#EBB0B0"
+        app:strokeColor="@color/white" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="355dp"
+        android:layout_height="290dp"
+        android:background="@drawable/styles_xml"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.699">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:id="@+id/tableLayout_Packs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="4dp"
+                    android:stretchColumns="1">
+
+                    <TextView
+                        android:id="@+id/tableCodigoPacks"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lbcodigo"
+                        android:textSize="20sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tableDescripcionPacks"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lbDescripcion"
+                        android:textSize="20sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tableExistenciaPacks"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lb_Unidades"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
+
+
+                </TableRow>
+
+            </TableLayout>
+
+        </HorizontalScrollView>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonMenu_Packs"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="28dp"
+        android:layout_height="35dp"
+        android:layout_margin="8dp"
+        android:layout_marginEnd="8dp"
+        android:drawablePadding="4dp"
+        android:paddingStart="2dp"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/menu_hamburguer"
+        app:iconSize="25dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#024CAA"
+        app:strokeColor="@color/white" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView_Packs_f1"
+        android:layout_width="380dp"
+        android:layout_height="450dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView_impresion_bluetooth"
+        android:layout_width="380dp"
+        android:layout_height="450dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/background_blocker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

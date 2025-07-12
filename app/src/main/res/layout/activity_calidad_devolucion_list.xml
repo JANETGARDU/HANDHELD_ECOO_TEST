@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Recibo.Devolucion.Calidad.Verificacion.Calidad_devolucion_list">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:id="@+id/cbSelectAbastecimiento_Cajas_Principal"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        app:boxStrokeColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.80"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.250">
+
+        <AutoCompleteTextView
+            android:id="@+id/cbSelectAbastecimiento_Cajas"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:ellipsize="end"
+            android:inputType="none"
+            android:visibility="gone" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@+id/cbSelectAbastecimiento_Status_Principal"
+        android:visibility="gone"
+        app:boxStrokeColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.80"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.250">
+
+        <AutoCompleteTextView
+            android:id="@+id/cbSelectAbastecimiento_Status"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:ellipsize="end"
+            android:inputType="none"
+            android:visibility="gone"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="355dp"
+        android:layout_height="290dp"
+        android:background="@drawable/styles_xml"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.699">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="4dp"
+                    android:stretchColumns="1">
+
+                    <TextView
+                        android:id="@+id/tableCodigo"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lbcodigo"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/tableDescripcion"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lbDescripcion"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tableRecibida"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lb_recibida"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/tablepor_recibir"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="Por Confirmar"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/tableItem"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lb_item"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:visibility="invisible"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:id="@+id/tableId"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/styles_xml"
+                        android:text="ID"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:visibility="invisible"
+                        android:textColor="@color/black"/>
+
+                </TableRow>
+
+            </TableLayout>
+
+        </HorizontalScrollView>
+
+    </ScrollView>
+
+
+    <EditText
+        android:id="@+id/editTextCodigo_Calidad_list"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/styles_xml"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.316"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.958" />
+
+    <TextView
+        android:id="@+id/txtDescripcion"
+        android:layout_width="336dp"
+        android:layout_height="89dp"
+        android:text="@string/lb_sugerido"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.346"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.199" />
+
+    <Button
+        android:id="@+id/buttonOK_Calidad"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="46dp"
+        android:layout_height="52dp"
+        android:paddingStart="5dp"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/logo_check"
+        app:iconSize="38dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.092"
+        app:rippleColor="#B0EBB1"
+        app:strokeColor="@color/white" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        app:boxStrokeColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.093">
+
+        <AutoCompleteTextView
+            android:id="@+id/cbSelectCalidad_list"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:ellipsize="end"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/buttonEliminar_codigo"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:paddingStart="5dp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/logo_delete"
+        app:iconSize="36dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.953"
+        app:rippleColor="#EBB0B0"
+        app:strokeColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="54dp"
+        android:layout_height="43dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logo_controlcalidad" />
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALIDAD DEVOLUCIÓN"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

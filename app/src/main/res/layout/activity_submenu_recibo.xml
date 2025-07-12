@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Submenus.Submenu_recibo">
+
+
+    <Button
+        android:id="@+id/buttonAbast_Menu_recibo"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="337dp"
+        android:layout_height="96dp"
+        android:text="@string/lb_abastecimiento"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/logo_abastecimiento"
+        app:iconSize="40dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.436"
+        app:rippleColor="#DEAA79"
+        app:strokeColor="@color/black" />
+
+    <Button
+        android:id="@+id/buttonRetorno_Menu_recibo"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="337dp"
+        android:layout_height="96dp"
+        android:text="@string/lb_retorno"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/logo_retorno"
+        app:iconSize="45dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.831"
+        app:rippleColor="#DEAA79"
+        app:strokeColor="@color/black" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="305dp"
+        android:layout_height="80dp"
+        android:fontFamily="@font/archivo_black"
+        android:text="@string/lb_recibo_submenu"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.105" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

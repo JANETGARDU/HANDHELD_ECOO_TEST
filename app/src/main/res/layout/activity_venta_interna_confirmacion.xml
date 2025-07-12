@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Picking.Cedis.VentaInterna.Venta_Interna_Confirmacion">
+
+    <FrameLayout
+        android:id="@+id/background_blocker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/buttonMenu"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="28dp"
+        android:layout_height="35dp"
+        android:layout_margin="8dp"
+        android:layout_marginEnd="8dp"
+        android:drawablePadding="4dp"
+        android:paddingStart="2dp"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/menu_hamburguer"
+        app:iconSize="25dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#024CAA"
+        app:strokeColor="@color/white" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:layout_width="380dp"
+        android:layout_height="450dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/viewSwitcher"
+        android:layout_width="380dp"
+        android:layout_height="450dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+        </LinearLayout>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerViewImagen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/lbFolioPI_VentaIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/lb_folio"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/txtFolio_VentaIn"
+        android:layout_width="192dp"
+        android:layout_height="50dp"
+        android:text="@string/lb_sugerido"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.735"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/txtDescripcion_VentaIn"
+        android:layout_width="204dp"
+        android:layout_height="79dp"
+        android:text="@string/lb_sugerido"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.289" />
+
+    <EditText
+        android:id="@+id/txtUbicacion_VentaIn"
+        android:layout_width="192dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.735"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.461" />
+
+    <TextView
+        android:id="@+id/lbUbicacionPI_VentaIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/lb_ubicacion"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.457" />
+
+    <EditText
+        android:id="@+id/txtCantidad_VentaIn"
+        android:layout_width="192dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="number"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.735"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.722" />
+
+    <Button
+        android:id="@+id/buttonEliminar_Box_VentaInterna_Pi"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="41dp"
+        android:layout_height="46dp"
+        android:paddingStart="5dp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/logo_delete"
+        app:iconSize="36dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.994"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.598"
+        app:rippleColor="#EBB0B0"
+        app:strokeColor="@color/white" />
+
+    <Button
+        android:id="@+id/buttonEliminar_Ubicacion_VentaInterna_Pi"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="41dp"
+        android:layout_height="46dp"
+        android:paddingStart="5dp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/logo_delete"
+        app:iconSize="36dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.994"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.458"
+        app:rippleColor="#EBB0B0"
+        app:strokeColor="@color/white" />
+
+    <TextView
+        android:id="@+id/lbCantidadPI_VentaIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/lb_Cantidad"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.715" />
+
+    <EditText
+        android:id="@+id/txtBox_VentaIn"
+        android:layout_width="192dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.735"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.596" />
+
+    <TextView
+        android:id="@+id/lbBoxPI_VentaIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/lb_box"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.593" />
+
+    <TextView
+        android:id="@+id/lbDescripcionPI_VentaIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/lbDescripcion"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.302" />
+
+    <EditText
+        android:id="@+id/txtCodigo_VentaIn"
+        android:layout_width="192dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.735"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.138"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/lbCodigoPI_VentaIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/lbcodigo"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.146" />
+
+    <Button
+        android:id="@+id/buttonCancelar_VentaInterna_Pi"
+        android:layout_width="145dp"
+        android:layout_height="45dp"
+        android:backgroundTint="#800000"
+        android:paddingStart="2dp"
+        android:paddingEnd="0dp"
+        android:text="@string/lb_cancelar"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.931" />
+
+    <Button
+        android:id="@+id/buttonConfirmar_VentaInterna_Pi"
+        android:layout_width="145dp"
+        android:layout_height="45dp"
+        android:backgroundTint="@color/btn_disabled_color"
+        android:paddingStart="2dp"
+        android:paddingEnd="0dp"
+        android:text="@string/lb_confirmar"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.939"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.931" />
+
+
+    <ImageView
+        android:id="@+id/imagen_tipo"
+        android:layout_width="61dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.844"
+        app:srcCompat="@drawable/envio_logo" />
+
+    <TextView
+        android:id="@+id/txtTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COMBO"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.824" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

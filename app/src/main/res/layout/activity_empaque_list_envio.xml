@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Empaque.Envio.Packing.SeleccionList_Envio">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView_recomendacion"
+        android:layout_width="380dp"
+        android:layout_height="480dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView_inventory"
+        android:layout_width="380dp"
+        android:layout_height="480dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/background_blocker_Pa_Envio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/buttonMenu_Pa_Envio"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="28dp"
+        android:layout_height="35dp"
+        android:layout_margin="8dp"
+        android:layout_marginEnd="8dp"
+        android:drawablePadding="4dp"
+        android:paddingStart="2dp"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/menu_hamburguer"
+        app:iconSize="25dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#024CAA"
+        app:strokeColor="@color/white" />
+
+    <FrameLayout
+        android:id="@+id/viewSwitcher_Pa_Envio"
+        android:layout_width="380dp"
+        android:layout_height="450dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerViewImagen_Pa_Envio"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/txtCodigo"
+        android:layout_width="135dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.035"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.867" />
+
+    <EditText
+        android:id="@+id/txtCantidad"
+        android:layout_width="47dp"
+        android:layout_height="44dp"
+        android:digits="0123456789"
+        android:ems="10"
+        android:importantForAccessibility="no"
+        android:inputType="number"
+        android:maxLength="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.57"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.867" />
+
+    <Button
+        android:id="@+id/buttonOK_Enviar"
+        android:layout_width="40dp"
+        android:layout_height="39dp"
+        android:backgroundTint="@color/btn_disabled_color"
+        android:paddingStart="2dp"
+        android:paddingEnd="0dp"
+        android:text="@string/btn_ok"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.719"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.862" />
+
+    <Button
+        android:id="@+id/buttonCaja_envio"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#EED3B1"
+        android:text="@string/btn_caja"
+        android:paddingStart="2dp"
+        android:paddingEnd="0dp"
+        android:textColor="@color/black"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.862" />
+
+    <ImageView
+        android:id="@+id/imageViewEnvioLogo"
+        android:layout_width="44dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.302"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.014"
+        app:srcCompat="@drawable/envio_logo" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="290dp"
+        android:layout_height="50dp"
+        app:boxStrokeColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.104">
+
+        <AutoCompleteTextView
+            android:id="@+id/cbSelectEnvios"
+            android:layout_width="290dp"
+            android:layout_height="50dp"
+            android:ellipsize="end"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/lbEnvioTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ar_one_sans_semibold"
+        android:text="@string/btn_envio_Menu"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.014" />
+
+    <CheckBox
+        android:id="@+id/checkBox_envios"
+        android:layout_width="30dp"
+        android:layout_height="36dp"
+        android:fontFamily="@font/ar_one_sans_medium"
+        android:textColorLink="#4CAF50"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.103"
+        app:rippleColor="#0B2F9F" />
+
+    <TextView
+        android:id="@+id/lb_pickeados_envio"
+        android:layout_width="103dp"
+        android:layout_height="22dp"
+        android:text="@string/lb_Pickeadas_Envio"
+        android:textColor="#205D67"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.196" />
+
+    <TextView
+        android:id="@+id/lb_porEmpacar_envio"
+        android:layout_width="118dp"
+        android:layout_height="20dp"
+        android:text="@string/lb_Pickeados_porEpacar"
+        android:textColor="#205D67"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.747"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.198" />
+
+    <TextView
+        android:id="@+id/lb_empaquetadas_envio"
+        android:layout_width="122dp"
+        android:layout_height="21dp"
+        android:text="@string/lb_empaquetados_envio"
+        android:textColor="#205D67"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.757"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.787" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="355dp"
+        android:layout_height="290dp"
+        android:background="@drawable/styles_xml"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:stretchColumns="1">
+
+                    <TextView
+                        android:id="@+id/txtCodigoT_E"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lbcodigo"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/txtDescripcionT_E"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lbDescripcion"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/txtPickingT_E"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lbPicking"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/txtPackingT_E"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lbPacking"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/txtPor_empacarT_E"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lb_Pickeados_porEpacar"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+                </TableRow>
+
+            </TableLayout>
+
+        </HorizontalScrollView>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="368dp"
+        android:layout_height="54dp"
+        android:background="#7ABA78"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/buttonCK_envio"
+            android:layout_width="160dp"
+            android:layout_height="48dp"
+            android:layout_gravity="start"
+            android:backgroundTint="#7ABA78"
+            android:padding="0dp"
+            android:text="@string/btn_ck_envio"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:cornerRadius="5dp" />
+
+        <Button
+            android:id="@+id/buttonRefrescar_envio"
+            android:layout_width="184dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:backgroundTint="#7ABA78"
+            android:text="@string/btn_ck_Refrescar"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:cornerRadius="5dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <Button
+        android:id="@+id/buttonEliminar_codigo"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="41dp"
+        android:layout_height="46dp"
+        android:paddingStart="5dp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/logo_delete"
+        app:iconSize="36dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.440"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.867"
+        app:rippleColor="#EBB0B0"
+        app:strokeColor="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

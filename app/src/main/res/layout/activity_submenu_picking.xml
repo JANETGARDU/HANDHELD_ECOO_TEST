@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Submenus.Submenu_picking">
+
+    <Button
+        android:id="@+id/buttonEnvio_Menu_picking"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="235dp"
+        android:layout_height="96dp"
+        android:text="@string/btn_envio_Menu_picking"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/envio_logo"
+        app:iconSize="40dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.237"
+        app:rippleColor="#A67B5B"
+        app:strokeColor="@color/black" />
+
+    <Button
+        android:id="@+id/buttonRecolecta_picking"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="235dp"
+        android:layout_height="96dp"
+        android:text="@string/btn_recolecta_Menu"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/recolecta_logo"
+        app:iconSize="29dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.514"
+        app:rippleColor="#A67B5B"
+        app:strokeColor="@color/black" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="305dp"
+        android:layout_height="80dp"
+        android:fontFamily="@font/archivo_black"
+        android:text="@string/lbl_menu_sel_picking"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.053" />
+
+    <Button
+        android:id="@+id/buttonCedis"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="235dp"
+        android:layout_height="96dp"
+        android:text="@string/lb_cedis"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/logo_cedis"
+        app:iconSize="40dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.818"
+        app:rippleColor="#A67B5B"
+        app:strokeColor="@color/black" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

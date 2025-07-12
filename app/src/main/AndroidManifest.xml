@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_CONNECT"
+        tools:ignore="ProtectedPermissions"
+        tools:targetApi="31" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:debuggable="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_logo_s"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_logo_s_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SlimMx"
+        tools:ignore="HardcodedDebugMode"
+        tools:targetApi="31">
+        <activity
+            android:name=".Almacen2.DevolucionProveedor.EntregaProveedor.Confirmacion_EntregaProveedor"
+            android:exported="false" />
+        <activity
+            android:name=".Almacen2.DevolucionProveedor.EntregaCedis.Confirmacion_Entrega_Cedis"
+            android:exported="false" />
+        <activity
+            android:name=".Almacen2.DevolucionProveedor.Menu_Devolucion"
+            android:exported="false" />
+        <activity
+            android:name=".Recibo.Devolucion.Calidad.Verificacion.CargaImagenes"
+            android:exported="false" />
+        <activity
+            android:name=".Recibo.Devolucion.Calidad.Verificacion.Calidad_devolucion_confirmacion"
+            android:exported="false" />
+        <activity
+            android:name=".Recibo.Devolucion.Calidad.Verificacion.Calidad_devolucion_list"
+            android:exported="false" />
+        <activity
+            android:name=".Recibo.Devolucion.Calidad.Submenu_alta_calidad_devolucion"
+            android:exported="false" />
+        <activity
+            android:name=".Recibo.Devolucion.Calidad.Alta.Alta_Devolucion_Calidad"
+            android:exported="false" />
+        <activity
+            android:name=".Recibo.Devolucion.Recibo.Recibo_devolucion_confirmar"
+            android:exported="false" />
+        <activity
+            android:name=".Recibo.Devolucion.Recibo.Recibo_devolucion"
+            android:exported="false" />
+        <activity
+            android:name=".Recibo.Devolucion.Entrada.Entrada_Devoluciones"
+            android:exported="false" />
+        <activity
+            android:name=".Recibo.Devolucion.Seleccion_devolucion"
+            android:exported="false" />
+        <activity
+            android:name=".Recibo.Abastecimiento.ControlCalidad.Submenu_control_calidad"
+            android:exported="false" />
+        <activity
+            android:name=".Recibo.Abastecimiento.ControlCalidad.Alta.Entrada_Calidad"
+            android:exported="false" />
+        <activity
+            android:name=".Embarque.Devolucion_Proveedor.Devolucion_proveedor"
+            android:exported="false" />
+        <activity
+            android:name=".Empaque.Recolecta.Submenu_Empaque_Recolecta"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Empaque.Envio.Submenu_Empaque_Envio"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Empaque.Recolecta.Asignacion.Empaque_Recolecta_Asiganacion"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Empaque.Envio.Asignacion.Empaque_Envio_Asignacion"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Recibo.Abastecimiento.Entrada.Entrada_orden_compra"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Picking.Recolecta.Asignacion.Asignacion_Recolecta_picking"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Picking.Envio.Asignacion.Asignacion_Envio_picking"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Picking.Recolecta.Submenu_Picking_Recolecta"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Picking.Envio.Submenu_Picking_Envio"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Recibo.Abastecimiento.ControlCalidad.Revision.ControlCalidad_Confirmacion"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Recibo.Abastecimiento.ControlCalidad.Revision.ControlCalidad_List"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Recibo.Abastecimiento.Seleccion_recibo_abastecimiento"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Embarque.Venta_interna.Embarque_venta_interna"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Embarque.Recolecta.Embarque_Paquetes_confir"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Submenus.Submenu_embarque"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Embarque.Recolecta.Embarque_Paquetes"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Embarque.Envio.Embarque_Envio"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Recibo.Devolucion.Match.Devolucion"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Inventario.Muestreo.Muestro_confirmacion"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Inventario.Muestreo.Inventario_ubicacion"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Inventario.Muestreo.Muestreo_list"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Inventario.Muestreo.Seleccion_muestreo"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Inventario.Consulta_inventarios.Consulta_inventario"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Inventario.Ajustes.Ajustes"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Submenus.Submenu_inventarios"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Consulta_Paquetes.Consultas_paquetes"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Packs_Combos.Busqueda_Packs"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Reacomodo.Tareas.Reacomodo_Items"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Reacomodo.Tareas.Reacomodo_Check"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Reacomodo.Tareas.Tarea_reacomodo_list"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Reacomodo.Manual.Reacomodo_manual"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Acomodo.Acomodo_confirmacion"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Submenus.Submenu_reacomodo"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Acomodo.Acomodo_list"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Submenus.Submenu_acomodo"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Recibo.Abastecimiento.Recibo.Recibo_confirmacion"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Recibo.Abastecimiento.Recibo.Recibo_list"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Submenus.Submenu_recibo"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Picking.Cedis.VentaInterna.Venta_Interna_Confirmacion"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Picking.Cedis.ConsumoInterno.Consumo_Interno_PI"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Picking.Cedis.VentaInterna.Venta_Interna_List"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Picking.Cedis.Cedis_seleccion_menu"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Empaque.InsumoGeneral.Insumos"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Empaque.Recolecta.Empaque.Packing_Recolecta"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Picking.Recolecta.Picking.Picking_recolecta_confirmacion"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Picking.Recolecta.Picking.Picking_recolecta_list"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Picking.Envio.Picking.Picking_envio_confirmacion"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Picking.Envio.Picking.Picking_envio_list"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Submenus.Submenu_picking"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".MenuPrincipal"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Empaque.Envio.Packing.CajasGeneradas"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Empaque.Envio.Packing.SeleccionList_Envio"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Submenus.Submenu_packing"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Login.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

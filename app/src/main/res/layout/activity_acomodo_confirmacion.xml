@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Acomodo.Acomodo_confirmacion">
+
+    <FrameLayout
+        android:id="@+id/background_blocker_Acomodo_confir"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/buttonMenu_Acomodo_confir"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="28dp"
+        android:layout_height="35dp"
+        android:layout_margin="8dp"
+        android:layout_marginEnd="8dp"
+        android:drawablePadding="4dp"
+        android:paddingStart="2dp"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/menu_hamburguer"
+        app:iconSize="25dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#024CAA"
+        app:strokeColor="@color/white" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView_f1_Acomodo_confir"
+        android:layout_width="380dp"
+        android:layout_height="450dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView_impresion_Acomodo"
+        android:layout_width="380dp"
+        android:layout_height="431dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView_impresion_bluetooth"
+        android:layout_width="380dp"
+        android:layout_height="450dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonConfirmar_Acomodo_confir"
+        android:layout_width="145dp"
+        android:layout_height="45dp"
+        android:backgroundTint="@color/btn_disabled_color"
+        android:paddingStart="2dp"
+        android:paddingEnd="0dp"
+        android:text="@string/lb_confirmar"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        android:enabled="false"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.939"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <Button
+        android:id="@+id/buttonCancelar_Acomodo_confir"
+        android:layout_width="145dp"
+        android:layout_height="45dp"
+        android:backgroundTint="#800000"
+        android:paddingStart="2dp"
+        android:paddingEnd="0dp"
+        android:text="@string/lb_cancelar"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <TextView
+        android:id="@+id/lbUbicacion_pi_re_confirm"
+        android:layout_width="129dp"
+        android:layout_height="55dp"
+        android:text="@string/lb_ubicacion_destino"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.181" />
+
+    <TextView
+        android:id="@+id/txtFolio_Acomodo_confirm"
+        android:layout_width="250dp"
+        android:layout_height="34dp"
+        android:text="@string/lb_sugerido"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <EditText
+        android:id="@+id/txtUbicacion_Destino_Acomodo_confirm"
+        android:layout_width="175dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.793"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.180" />
+
+    <EditText
+        android:id="@+id/txtBox_Destino_Acomodo_confirm"
+        android:layout_width="175dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.310" />
+
+    <TextView
+        android:id="@+id/lbCodigo_pi_re_confirm"
+        android:layout_width="143dp"
+        android:layout_height="51dp"
+        android:text="@string/lb_EscanearCo"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.580" />
+
+    <Button
+        android:id="@+id/buttonEliminar_codigo_Acomodo"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="41dp"
+        android:layout_height="46dp"
+        android:paddingStart="5dp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/logo_delete"
+        app:iconSize="36dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.994"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.568"
+        app:rippleColor="#EBB0B0"
+        app:strokeColor="@color/white" />
+
+    <EditText
+        android:id="@+id/txtCodigo_Acomodo_confirm"
+        android:layout_width="175dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.570" />
+
+    <TextView
+        android:id="@+id/txtSugeridoCodigo_Acomodo"
+        android:layout_width="175dp"
+        android:layout_height="31dp"
+        android:text="@string/lb_sugerido"
+        android:textAlignment="center"
+        android:textColor="#134B70"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.642" />
+
+    <TextView
+        android:id="@+id/lb_Descripcion_acomodo"
+        android:layout_width="342dp"
+        android:layout_height="65dp"
+        android:text="@string/lbDescripcion"
+        android:textColor="#134B70"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.289"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.455" />
+
+    <TextView
+        android:id="@+id/lbCantidad_pi_re_confirm"
+        android:layout_width="127dp"
+        android:layout_height="30dp"
+        android:text="@string/lb_Cantidad"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.731" />
+
+
+
+    <TextView
+        android:id="@+id/lbbox_pi_re_confirm"
+        android:layout_width="113dp"
+        android:layout_height="38dp"
+        android:text="@string/lb_box_destino"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.310" />
+
+    <TextView
+        android:id="@+id/lb_SugeridoUbi_Des_acomodo"
+        android:layout_width="175dp"
+        android:layout_height="31dp"
+        android:text="@string/lb_sugerido"
+        android:textColor="#134B70"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.247" />
+
+    <EditText
+        android:id="@+id/txtCantidad_Acomodo_confirm"
+        android:layout_width="175dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.730" />
+
+    <TextView
+        android:id="@+id/txtSugeridoCantidad_pi_re_acc"
+        android:layout_width="175dp"
+        android:layout_height="31dp"
+        android:text="@string/lb_sugerido"
+        android:textAlignment="center"
+        android:textColor="#134B70"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.796"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.795" />
+
+    <TextView
+        android:id="@+id/lb_SugeridoBox_Des_acomodo"
+        android:layout_width="175dp"
+        android:layout_height="31dp"
+        android:text="@string/lb_sugerido"
+        android:textAlignment="center"
+        android:textColor="#134B70"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.380" />
+
+
+    <Button
+        android:id="@+id/buttonEliminar_Ubicacion_Acomodo"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="41dp"
+        android:layout_height="46dp"
+        android:paddingStart="5dp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/logo_delete"
+        app:iconSize="36dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.989"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.184"
+        app:rippleColor="#EBB0B0"
+        app:strokeColor="@color/white" />
+
+    <Button
+        android:id="@+id/buttonEliminar_Box_Acomodo"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="41dp"
+        android:layout_height="46dp"
+        android:paddingStart="5dp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/logo_delete"
+        app:iconSize="36dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.989"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.310"
+        app:rippleColor="#EBB0B0"
+        app:strokeColor="@color/white" />
+
+    <TextView
+        android:id="@+id/txtUbicacion_Origen_Acomodo_confirm"
+        android:layout_width="175dp"
+        android:layout_height="25dp"
+        android:text="@string/lb_sugerido"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.817"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.111" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="91dp"
+        android:layout_height="44dp"
+        android:text="@string/lb_Ubicacion_origen"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <TextView
+        android:id="@+id/lbtipodefecto"
+        android:layout_width="129dp"
+        android:layout_height="58dp"
+        android:text="@string/lb_tipo_defecto"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.887" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:paddingTop="4dp"
+        android:id="@+id/cbSelectAcomodo_drown"
+        app:boxStrokeColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.890"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.880">
+
+        <AutoCompleteTextView
+            android:id="@+id/cbSelectAcomodo"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:paddingTop="4dp"
+            android:ellipsize="end"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

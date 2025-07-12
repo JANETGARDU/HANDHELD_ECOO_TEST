@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Inventario.Muestreo.Seleccion_muestreo">
+
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="317dp"
+        android:layout_height="94dp"
+        android:text="@string/lb_selecciona_tipo_muestreo"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.219" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="324dp"
+        android:layout_height="60dp"
+        app:boxStrokeColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.440"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.400">
+
+        <AutoCompleteTextView
+            android:id="@+id/cbSelectTipoMuestreo"
+            android:layout_width="324dp"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:inputType="none"
+            android:paddingTop="16sp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="59dp"
+            tools:layout_editor_absoluteY="276dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

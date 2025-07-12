@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="350dp"
+        android:layout_height="320dp"
+        android:background="@drawable/styles_xml"
+        android:fillViewport="true"
+        >
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:id="@+id/tableLayout_hist_pick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="4dp"
+                    android:stretchColumns="1">
+
+                    <TextView
+                        android:id="@+id/tableCodigo_pi_recolecta_hist"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lbcodigo"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tableUnidades_pi_recolecta_hist"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lb_Unidades"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tableDescripcion_pi_recolecta_hist"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lbDescripcion"
+                        android:visibility="invisible"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+
+            </TableLayout>
+
+        </HorizontalScrollView>
+
+    </ScrollView>
+</LinearLayout>

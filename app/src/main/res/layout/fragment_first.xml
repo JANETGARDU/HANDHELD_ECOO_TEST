@@ -1,0 +1,161 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_pickingtareas"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="350dp"
+        android:layout_height="320dp"
+        android:background="@drawable/styles_xml"
+        android:fillViewport="true"
+        >
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:id="@+id/tableLayout_tareas_pick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="4dp"
+                    android:stretchColumns="1">
+
+                    <TextView
+                        android:id="@+id/tableDescripcion_pi_recolecta"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lbDescripcion"
+                        android:visibility="invisible"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/tableIndex_pi_recolecta"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lb_index"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/tableCodigo_pi_recolecta"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lbcodigo"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/tablePaquete_pi_recolecta"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/styles_xml"
+                        android:text=""
+                        android:visibility="invisible"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tableUbicacion_pi_recolecta"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lb_ubicacion"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tableCaja_pi_recolecta"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lb_box"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tableCantidad_pi_recolecta"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lbCantidad"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tableAlmacen_pi_recolecta"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lb_almacen"
+                        android:visibility="invisible"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tableArea_pi_recolecta"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lb_area"
+                        android:visibility="invisible"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+
+                    <TextView
+                        android:id="@+id/tableUbi_ori_pi_recolecta"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/styles_xml"
+                        android:visibility="invisible"
+                        android:text="@string/lb_ubicacion_destino"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tableBox_ori_pi_recolecta"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lb_box_destino"
+                        android:visibility="invisible"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/tableItem_pi_recolecta"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="@string/lb_item"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tableFecha_pi_recolecta"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="Fecha"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tableCodigoReferencia"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="Referencia"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+                </TableRow>
+
+            </TableLayout>
+
+        </HorizontalScrollView>
+
+    </ScrollView>
+</LinearLayout>

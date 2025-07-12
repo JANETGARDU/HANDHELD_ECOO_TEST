@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_impresora"
+        android:icon="@drawable/logo_impresora"
+        android:title="Imprimir Etiquetas" />
+    <item
+        android:id="@+id/item_f1"
+        android:icon="@drawable/logo_f1"
+        android:title="Ubicaciones" />
+    <item
+        android:id="@+id/item_ver_imagen"
+        android:icon="@drawable/logo_verimagen"
+        android:title="@string/lb_ver_imagen" />
+    <item
+        android:id="@+id/item_etiquetas_bluetooth"
+        android:icon="@drawable/logo_verimagen"
+        android:title="@string/lb_menu_etiquetas_blue" />
+    <item
+        android:id="@+id/item_packs_combos"
+        android:icon="@drawable/logo_combos_packetes"
+        android:title="PACKS y COMBOS" />
+
+    <item
+        android:id="@+id/item_recomendaciones"
+        android:icon="@drawable/logo_combos_packetes"
+        android:title="Etiquetas Recomendación" />
+
+    <item
+        android:id="@+id/item_verificacion"
+        android:icon="@drawable/logo_combos_packetes"
+        android:title="Etiquetas Verificación" />
+
+    <item
+        android:id="@+id/item_inventario"
+        android:icon="@drawable/logo_combos_packetes"
+        android:title="Etiquetas Inventario" />
+</menu>

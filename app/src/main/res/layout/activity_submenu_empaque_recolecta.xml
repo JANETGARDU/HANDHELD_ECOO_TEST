@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Empaque.Recolecta.Submenu_Empaque_Recolecta">
+
+    <Button
+        android:id="@+id/buttonEmpa_Sub"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="337dp"
+        android:layout_height="96dp"
+        android:text="@string/lbEmpaque"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/logo_empaque"
+        app:iconSize="55dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.434"
+        app:rippleColor="#BAC0F0"
+        app:strokeColor="@color/black" />
+
+    <Button
+        android:id="@+id/buttonAsig_Sub"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="337dp"
+        android:layout_height="96dp"
+        android:text="@string/lb_asignacion"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/logo_tarima"
+        app:iconSize="60dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.788"
+        app:rippleColor="#BAC0F0"
+        app:strokeColor="@color/black" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="305dp"
+        android:layout_height="80dp"
+        android:fontFamily="@font/archivo_black"
+        android:text="@string/lb_seleccion_proceso"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.167" />
+
+    <ImageView
+        android:id="@+id/imageViewEnvioLogo"
+        android:layout_width="44dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.226"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.014"
+        app:srcCompat="@drawable/recolecta_logo" />
+
+    <TextView
+        android:id="@+id/lbEnvioTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ar_one_sans_semibold"
+        android:text="@string/btn_recolecta_Menu"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.014" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
