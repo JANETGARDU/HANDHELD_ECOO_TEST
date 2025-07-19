@@ -102,7 +102,15 @@
                         android:text="@string/lbDescripcion"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
-
+                    <TextView
+                        android:id="@+id/tableprioridad"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/styles_xml"
+                        android:text="Prioridad"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
                     <TextView
                         android:id="@+id/tableRecibida"
                         android:layout_width="100dp"

@@ -23,6 +23,7 @@ import com.example.slimmx.R
 import com.example.slimmx.Recibo.Abastecimiento.ControlCalidad.Submenu_control_calidad
 import com.example.slimmx.Recibo.Abastecimiento.Seleccion_recibo_abastecimiento
 import com.example.slimmx.Validaciones.LogsEntradaSalida
+import com.example.slimmx.Validaciones.MostrarTeclado
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -31,6 +32,7 @@ class Entrada_Calidad : AppCompatActivity() {
     private lateinit var txtUbicacion:EditText;
     private lateinit var cbSelect: AutoCompleteTextView;
     private lateinit var btn_confirmar: Button;
+    private lateinit var txtCodigo:EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,12 +53,19 @@ class Entrada_Calidad : AppCompatActivity() {
             }
         }
 
-        txtUbicacion=findViewById(R.id.txtUbicacion);
+        txtUbicacion = findViewById(R.id.txtUbicacion);
         cbSelect = findViewById(R.id.cbSelect);
-        btn_confirmar=findViewById(R.id.buttonConfirmar);
+        btn_confirmar = findViewById(R.id.buttonConfirmar);
+        txtCodigo = findViewById(R.id.txtCodigo)
+        btn_confirmar.isEnabled = false;
 
-        btn_confirmar.isEnabled=false;
+        val btn_eliminar_ubicacion = findViewById<Button>(R.id.buttonEliminar_Ubicacion);
+        val btn_eliminar_codigo = findViewById<Button>(R.id.buttonEliminar_CODIGO)
+
         val opciones = intent.getStringArrayExtra("folios")
+
+        txtUbicacion.setOnTouchListener(MostrarTeclado.getMostrarTeclado());
+        txtCodigo.setOnTouchListener(MostrarTeclado.getMostrarTeclado());
 
         if (opciones != null && opciones.isNotEmpty()) {
             actualizarcbBox(opciones.toList()) // Llenar el ComboBox con los datos recibidos
@@ -65,6 +74,16 @@ class Entrada_Calidad : AppCompatActivity() {
             intent.putExtra("MESSAGE", "No hay folios disponibles")
             startActivity(intent)
             finish()
+        }
+
+        btn_eliminar_ubicacion.setOnClickListener {
+            txtUbicacion.setText("");
+            txtUbicacion.post { txtUbicacion.requestFocus() }
+        }
+
+        btn_eliminar_codigo.setOnClickListener {
+            txtCodigo.setText("");
+            txtCodigo.post { txtCodigo.requestFocus() }
         }
 
         txtUbicacion.setOnKeyListener { _, keyCode, event ->
@@ -97,7 +116,7 @@ class Entrada_Calidad : AppCompatActivity() {
             builder.setMessage("¿Está seguro de que desea confirmar el siguiente elemento?")
 
             builder.setPositiveButton("Confirmar") { dialog, _ ->
-                Confirmacion(cbSelect.text.toString());
+                Confirmacion(cbSelect.text.toString(), txtCodigo.text.toString());
                 dialog.dismiss()
             }
 
@@ -133,12 +152,12 @@ class Entrada_Calidad : AppCompatActivity() {
 
     }
 
-    private fun Confirmacion(folio:String){
+    private fun Confirmacion(folio:String, codigo:String){
         val btn_confirmar=findViewById<Button>(R.id.buttonConfirmar);
         try {
-            btn_confirmar.isEnabled=false;
             val body= mapOf(
-                "FOLIO" to folio
+                "FOLIO" to folio,
+                "CODIGO" to codigo
             )
             val txtUbicacion=findViewById<EditText>(R.id.txtUbicacion);
             val headers = mapOf(
@@ -159,10 +178,11 @@ class Entrada_Calidad : AppCompatActivity() {
                                 this@Entrada_Calidad,
                                 "Confirmada correctamente"
                             ) {
-                                cbSelect.setText("");
-                                txtUbicacion.setText("");
+                                //cbSelect.setText("");
+                                //txtUbicacion.setText("");
+                                txtCodigo.setText("");
                                 Obtenerfolios();
-                                btn_confirmar.isEnabled=false;
+                                btn_confirmar.isEnabled=true;
                             }
                         }
                     },

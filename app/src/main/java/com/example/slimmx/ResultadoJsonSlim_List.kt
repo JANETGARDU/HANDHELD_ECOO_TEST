@@ -452,7 +452,8 @@ data class ListaItemsCalidad(
     val CANTIDAD_RECIBIDA:Int,
     val POR_CONFIRMAR:Int,
     val ITEM:Int,
-    val ID:Int
+    val ID:Int,
+    val PRIORIDAD:Int
 )
 
 data class ListaItemsCalidadDevolucion(

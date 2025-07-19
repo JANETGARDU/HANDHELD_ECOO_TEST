@@ -31,7 +31,10 @@ suspend fun <T : Any> Pedir_datos_apis(
     onError: (String) -> Unit
 ) {
     try {
-        val response = service.getDatos(endpoint, params, headers)
+        val defaultHeaders = mapOf("app.mode" to "Debug")
+        val mergedHeaders = defaultHeaders + headers
+        val response = service.getDatos(endpoint, params, mergedHeaders)
+        //val response = service.getDatos(endpoint, params, headers)
 
         if (response.isSuccessful) {
             val body = response.body()
@@ -90,7 +93,10 @@ suspend fun <T : Any> Pedir_datos_apis_post(
 ) {
     CoroutineScope(Dispatchers.IO).launch {
         try {
-            val response = service2.getDatos_Post(endpoint, body, headers)
+            val defaultHeaders = mapOf("app.mode" to "Debug")
+            val mergedHeaders = defaultHeaders + headers
+            val response =  service2.getDatos_Post(endpoint, body, mergedHeaders)
+            //val response = service2.getDatos_Post(endpoint, body, headers)
 
             if (response.isSuccessful) {
                 val body = response.body()
@@ -153,7 +159,11 @@ fun <T : Any> Pedir_datos_apis_post_json(
 ) {
     CoroutineScope(Dispatchers.IO).launch {
         try {
-            val response = service3.getDatos_Post_json(endpoint, body, headers)
+            val defaultHeaders = mapOf("app.mode" to "Debug")
+            val mergedHeaders = defaultHeaders + headers // headers puede sobrescribir "app.mode"
+            val response = service3.getDatos_Post_json(endpoint, body, mergedHeaders)
+
+           // val response = service3.getDatos_Post_json(endpoint, body, headers)
 
             if (response.isSuccessful) {
                 val responseBodyString = response.body()?.string()
@@ -200,62 +210,3 @@ fun <T : Any> Pedir_datos_apis_post_json(
         }
     }
 }
-
-/*fun <T : Any> Pedir_datos_apis_post_imagenes(
-    endpoint: String,
-    imageParts: List<MultipartBody.Part>, // Soporte para múltiples imágenes
-    listaKey: String,
-    dataClass: KClass<T>,
-    headers: Map<String, String> = emptyMap(),
-    onSuccess: (T) -> Unit,
-    onError: (String) -> Unit
-) {
-    CoroutineScope(Dispatchers.IO).launch {
-        try {
-            val response = service4.getDatos_Post_imagenes(endpoint, imageParts, headers)
-
-            if (response.isSuccessful) {
-                val responseBodyString = response.body()?.string()
-                Log.d("API_RESPONSE", "Cuerpo completo: $responseBodyString")
-
-                if (responseBodyString != null) {
-                    val jsonObject = Gson().fromJson(responseBodyString, JsonObject::class.java)
-                    val status = jsonObject["status"]?.asInt ?: -1
-                    val message = jsonObject["message"]?.asString ?: "Sin mensaje"
-
-                    val result = jsonObject[listaKey]
-                    if (result != null) {
-                        try {
-                            val parsedObject = Gson().fromJson(result, dataClass.java)
-                            withContext(Dispatchers.Main) { onSuccess(parsedObject) }
-                        } catch (e: Exception) {
-                            Log.e("API_RESPONSE", "Error al deserializar: ${e.message}")
-                            withContext(Dispatchers.Main) { onError("Error al procesar el resultado.") }
-                        }
-                    } else {
-                        withContext(Dispatchers.Main) { onError("No se encontró la clave '$listaKey' en la respuesta.") }
-                    }
-                } else {
-                    withContext(Dispatchers.Main) { onError("El cuerpo de la respuesta está vacío.") }
-                }
-            } else {
-                val errorBody = response.errorBody()?.string()
-                val errorMessage = try {
-                    val errorJson = Gson().fromJson(errorBody, JsonObject::class.java)
-                    errorJson["message"]?.asString ?: "Error desconocido"
-                } catch (e: Exception) {
-                    "Error desconocido al procesar la respuesta."
-                }
-
-                withContext(Dispatchers.Main) { onError("Error en la petición: $errorMessage") }
-            }
-        } catch (e: Exception) {
-            withContext(Dispatchers.Main) {
-                when (e) {
-                    is SocketTimeoutException -> onError("La respuesta tardó demasiado. Intenta nuevamente.")
-                    else -> onError("Excepción al realizar la petición: ${e.localizedMessage}")
-                }
-            }
-        }
-    }
-}*/

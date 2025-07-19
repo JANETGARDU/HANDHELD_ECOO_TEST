@@ -912,7 +912,7 @@ class SeleccionList_Envio : AppCompatActivity(), ImageFragment.OnBackgroundBlock
                                     .setPositiveButton("Aceptar") { dialog, _ ->
                                         dialog.dismiss()
                                         val token=this@SeleccionList_Envio.token
-                                        val ip = "192.168.10.22"
+                                       /* val ip = "192.168.10.22"
                                         val codigoZPL = "\"\"\"\n" +
                                                  "            ^XA\n" +
                                                  "            ^CI28\n" +
@@ -965,7 +965,7 @@ class SeleccionList_Envio : AppCompatActivity(), ImageFragment.OnBackgroundBlock
                                                     .create()
                                                     .show()
                                             }
-                                        }
+                                        }*/
                                     }
                                     .setCancelable(false)
                                     .create()

@@ -250,7 +250,8 @@ class ControlCalidad_List : AppCompatActivity() {
                                                 CANTIDAD_RECIBIDA = it.CANTIDAD_RECIBIDA,
                                                 POR_CONFIRMAR = it.POR_CONFIRMAR,
                                                 ITEM = it.ITEM,
-                                                ID = it.ID
+                                                ID = it.ID,
+                                                PRIORIDAD=it.PRIORIDAD
                                             )
 
                                         }
@@ -337,6 +338,11 @@ class ControlCalidad_List : AppCompatActivity() {
                 text = item.DESCRIPCION
             }
 
+            val prioridad=TextView(this).apply {
+                text = item.PRIORIDAD.toString()
+                gravity = Gravity.CENTER
+            }
+
             val RecibidaTextView = TextView(this).apply {
                 text = item.CANTIDAD_RECIBIDA.toString();
                 gravity = Gravity.CENTER
@@ -361,6 +367,7 @@ class ControlCalidad_List : AppCompatActivity() {
 
             tableRow.addView(codigoTextView);
             tableRow.addView(descripcionTextView);
+            tableRow.addView(prioridad);
             tableRow.addView(RecibidaTextView);
             tableRow.addView(Por_recibirTextView);
             tableRow.addView(ItemTextView);
@@ -403,12 +410,13 @@ class ControlCalidad_List : AppCompatActivity() {
 
                     val codigo=(fila.getChildAt(0) as? TextView)?.text.toString();
                     val descripcion=(fila.getChildAt(1) as? TextView)?.text.toString();
-                    val cantidad_recibida=(fila.getChildAt(2) as? TextView)?.text.toString();
-                    val por_recibir=(fila.getChildAt(3)as? TextView)?.text.toString();
-                    val no_item=(fila.getChildAt(4) as? TextView)?.text.toString();
-                    val id=(fila.getChildAt(5)as? TextView)?.text.toString();
+                    val prioridad=(fila.getChildAt(2)as? TextView)?.text.toString();
+                    val cantidad_recibida=(fila.getChildAt(3) as? TextView)?.text.toString();
+                    val por_recibir=(fila.getChildAt(4)as? TextView)?.text.toString();
+                    val no_item=(fila.getChildAt(5) as? TextView)?.text.toString();
+                    val id=(fila.getChildAt(6)as? TextView)?.text.toString();
 
-                    val item = ListaItemsCalidad(codigo,descripcion,cantidad_recibida.toInt(),por_recibir.toInt(), no_item.toInt(), id.toInt());
+                    val item = ListaItemsCalidad(codigo,descripcion,prioridad.toInt(),cantidad_recibida.toInt(),por_recibir.toInt(), no_item.toInt(), id.toInt());
 
                     actualizarFilaSeleccionada(item)
 

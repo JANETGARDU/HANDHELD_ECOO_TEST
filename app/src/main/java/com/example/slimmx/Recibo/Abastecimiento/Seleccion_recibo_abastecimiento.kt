@@ -56,10 +56,10 @@ class Seleccion_recibo_abastecimiento : AppCompatActivity() {
         }
 
         btn_calidad.setOnClickListener {
-            /*startActivity(Intent(this@Seleccion_recibo_abastecimiento, Submenu_control_calidad::class.java));
+            startActivity(Intent(this@Seleccion_recibo_abastecimiento, Submenu_control_calidad::class.java));
             LogsEntradaSalida.logsPorModulo( this@Seleccion_recibo_abastecimiento, lifecycleScope, "ABASTECIMIENTO/CALIDAD", "ENTRADA");
-            finish();*/
-            FoliosReciboCalidad();
+            finish();
+            /*FoliosReciboCalidad();*/
 
         }
 
